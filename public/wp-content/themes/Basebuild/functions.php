@@ -157,4 +157,15 @@ function disable_parent_menu_link()
 }
 
 // add_action('wp_footer', 'disable_parent_menu_link');
+
+
+// restrict admin access for subscriber members. 
+function restrict_admin_access() {
+    if (current_user_can('subscriber') && !defined('DOING_AJAX')) {
+        wp_redirect(home_url('/user-dashboard/')); // Redirect to the custom dashboard
+        exit;
+    }
+}
+add_action('admin_init', 'restrict_admin_access');
+
 ?>

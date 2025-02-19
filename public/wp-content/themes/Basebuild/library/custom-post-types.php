@@ -24,7 +24,7 @@ if( function_exists('acf_add_options_page') ) {
 add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
-	register_post_type( 'flower',
+	register_post_type( 'flowers',
 		array(
 			'labels' => array(
 				'name' => __( 'Flowers' ),
@@ -34,7 +34,7 @@ function create_post_type() {
 			'show_in_nav_menus' => true,
 			'has_archive' => true,
 			'taxonomies' => array('category', 'post_tag'),
-			'supports' => array('title', 'thumbnail', 'author','editor'),
+			'supports' => array('title', 'thumbnail', 'author'),
 			'menu_icon' => 'dashicons-welcome-learn-more'
 		)
 	);
