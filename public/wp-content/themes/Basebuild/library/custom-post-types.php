@@ -40,3 +40,24 @@ if( function_exists('acf_add_options_page') ) {
 // 	);
 	
 // }
+
+
+// sanitise text area fields
+
+// add_filter('acf/update_value/name=plant_json', 'sanitize_json_input', 10, 3);
+// function sanitize_json_input($value, $post_id, $field) {
+//     // Remove line breaks and extra spaces from the JSON string
+//     $value = str_replace(array("\r", "\n"), '', $value);
+//     $value = trim($value);
+    
+//     // Optionally, validate the JSON
+//     if (!empty($value)) {
+//         json_decode($value);
+//         if (json_last_error() !== JSON_ERROR_NONE) {
+//             // Handle invalid JSON (e.g., log an error or return a default value)
+//             return '';
+//         }
+//     }
+    
+//     return $value;
+// }
