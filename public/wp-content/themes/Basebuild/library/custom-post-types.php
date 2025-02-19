@@ -20,23 +20,23 @@ if( function_exists('acf_add_options_page') ) {
 
 } 
 
-// to add custom post types to the sites menu
-add_action( 'init', 'create_post_type' );
+//  // to add custom post types to the sites menu
+// add_action( 'init', 'create_post_type' );
 
-function create_post_type() {
-	register_post_type( 'flowers',
-		array(
-			'labels' => array(
-				'name' => __( 'Flowers' ),
-				'singular_name' => __( 'Flower' )
-			),
-			'public' => true,
-			'show_in_nav_menus' => true,
-			'has_archive' => true,
-			'taxonomies' => array('category', 'post_tag'),
-			'supports' => array('title', 'thumbnail', 'author'),
-			'menu_icon' => 'dashicons-welcome-learn-more'
-		)
-	);
+// function create_post_type() {
+// 	register_post_type( 'flowers',
+// 		array(
+// 			'labels' => array(
+// 				'name' => __( 'Flowers' ),
+// 				'singular_name' => __( 'Flower' )
+// 			),
+// 			'public' => true,
+// 			'show_in_nav_menus' => true,
+// 			'has_archive' => true,
+// 			'taxonomies' => array('category', 'post_tag'),
+// 			'supports' => array('title', 'thumbnail', 'author'),
+// 			'menu_icon' => 'dashicons-welcome-learn-more'
+// 		)
+// 	);
 	
-}
+// }

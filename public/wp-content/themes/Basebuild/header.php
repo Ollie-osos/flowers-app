@@ -8,11 +8,11 @@
  */
 
 // Get ACF vars from options
-if($args['page_colour']){
-  $page_colour = 'page-colour_' . $args['page_colour'];
-}else{
-  $page_colour = 'page-colour_pink';
-}
+// if($args['page_colour']){
+//   $page_colour = 'page-colour_' . $args['page_colour'];
+// }else{
+//   $page_colour = 'page-colour_pink';
+// }
 
 ?>
 <!doctype html>
@@ -26,7 +26,7 @@ if($args['page_colour']){
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($page_colour); ?>>
+<body>
 
 
   <header class="header header-fixed u-unselectable <?php echo $page_colour; ?>">
